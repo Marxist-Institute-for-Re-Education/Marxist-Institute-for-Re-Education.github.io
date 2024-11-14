@@ -2,7 +2,45 @@
 title: Reading List
 ---
 
-<!-- TODO: add links!! -->
+<h1>Reading List</h1>
+{% for stage in site.data.books %}
+    <div class="reading-list-stage">
+        <div class="stage-main">
+            <h2>Stage {{ forloop.index }}: {{ stage.title }}</h2>
+            <ol>
+                {% for book in stage.main %}
+                <li>
+                    <cite>
+                        {% if book.link %}
+                            <a href="{{ book.link }}">{{ book.title }}</a>
+                        {% else %}
+                            {{ book.title }}
+                        {% endif %}
+                    </cite> by {{ book.author }}
+                </li>
+                {% endfor %}
+            </ol>
+        </div>
+        <div class="stage-optional">
+            <h4>Optional, but highly encouraged:</h4>
+            <ul>
+                {% for book in stage.optional %}
+                <li>
+                    <cite>
+                        {% if book.link %}
+                            <a href="{{ book.link }}">{{ book.title }}</a>
+                        {% else %}
+                            {{ book.title }}
+                        {% endif %}
+                    </cite> by {{ book.author }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endfor %}
+
+<!-- TODO: add links!!
 <h1>Reading List</h1>
 <div class="reading-list-stage">
     <div class="stage-main">
@@ -53,4 +91,4 @@ title: Reading List
             <li><cite>The Modern Revisionists on the Way to Degenerating into Social Democrats and to fusing with Social Democracy</cite> by Hoxha</li>
         </ul>
     </div>
-</div>
+</div> -->

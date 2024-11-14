@@ -1,8 +1,0 @@
-{% capture book %}
-    <cite>{{ include.title }}</cite> by {{ include.author }}
-{% endcapture %}
-{% if include.url %}
-    <a href="{{ include.url }}">{{ book }}</a>
-{% else %}
-    {{ book }}
-{% endif %}
