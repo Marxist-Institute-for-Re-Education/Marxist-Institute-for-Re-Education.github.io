@@ -1,0 +1,73 @@
+@use "base" as *;
+
+header {
+    width: 100%;
+    min-height: fit-content;
+    height: 10vh;
+    max-height: 150px;
+    background-color: $red-main;
+    display: flex;
+    justify-items: left;
+    position: sticky;
+}
+
+#header-org-name {
+    font-size: 2rem;
+    font-family: $org-name-font;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+#header-logo {
+    margin-top: 0.5%;
+    height: 100%;
+    max-height: 125px;
+    display: flex;
+    align-items: center;
+}
+
+nav#topnav {
+    position: sticky;
+    overflow: hidden;
+}
+
+nav#topnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $dark-grey;
+}
+
+nav#topnav li {
+    float: left;
+}
+
+nav#topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav#topnav li:not(.active) a:hover {
+    background-color: $red-darker;
+}
+
+nav#topnav li.active {
+    background-color: $red-darker;
+}
+
+@media screen and (max-width: 600px) {
+    #header-org-name {
+        font-size: 1.75em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #header-org-name {
+        font-size: 1.5em;
+    }
+}

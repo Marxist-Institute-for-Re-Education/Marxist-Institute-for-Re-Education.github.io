@@ -7,6 +7,9 @@
         <link rel="icon" type="image/x-icon" href="/images/red-graphic.png">
         <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        {% for name in layout.extra_styles %}
+            <link rel="stylesheet" type="text/css" href="/assets/css/{{ name }}.css">
+        {% endfor %}
     </head>
     <body>
         <header>
@@ -15,15 +18,15 @@
                 {{ page.org_name }}
             </span>
         </header>
-        <nav>
+        <nav id="topnav">
             <ul>
-                {% if page.title == "Articles" %}<li class="active">{% else %}<li>{% endif %}
+                <li {% if page.title == "Articles" %}class="active"{% endif %}>
                 <a href="/articles.html">Articles</a></li>
-                {% if page.title == "Program" %}<li class="active">{% else %}<li>{% endif %}
+                <li {% if page.title == "Program" %}class="active"{% endif %}>
                 <a href="/program.html">Program</a></li>
-                {% if page.title == "Socials" %}<li class="active">{% else %}<li>{% endif %}
+                <li {% if page.title == "Socials" %}class="active"{% endif %}>
                 <a href="/socials.html">Socials</a></li>
-                {% if page.title == "Reading List" %}<li class="active">{% else %}<li>{% endif %}
+                <li {% if page.title == "Reading List" %}class="active"{% endif %}>
                 <a href="/reading-list.html">Reading List</a></li>
             </ul>
         </nav>

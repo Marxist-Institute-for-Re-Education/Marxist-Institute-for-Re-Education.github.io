@@ -1,0 +1,49 @@
+@use "base" as *;
+
+div#content {
+    // padding: 0 !important;
+
+    // nav#articles-sidenav {
+    //     // height: 100%;
+    //     width: 20%;
+    //     background-color: $dark-grey;
+    //     color: white;
+    //     text-decoration: none;
+    //     padding: 1vh;
+    //     position: fixed;
+    //     float: left;
+
+    //     ul {
+    //         list-style-type: none;
+    //     }
+
+    //     li a {
+    //         color: white;
+    //         display: block;
+    //         padding: 8px 16px;
+    //         text-decoration: none;
+    //     }
+
+    //     li.active {
+    //         background-color: $red-darker;
+    //     }
+    // }
+
+    // article {
+    //     width: 80%;
+    //     float: right;
+    // }
+
+    #article-title {
+        font-size: 4rem;
+    }
+
+    #article-author {
+        font-size: 1rem;
+    }
+
+    // #article-content {
+
+    // }
+}
+

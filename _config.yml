@@ -15,3 +15,10 @@ defaults:
       tw_handle: "@Marxist_IRE"
       tt_link: "https://www.tiktok.com/@marxist.ire"
       tt_handle: "@marxist.ire"
+  -
+    scope:
+      path: "_posts/*"
+      type: "posts"
+    values:
+      layout: "default"
+      author: "Literature Committee"
