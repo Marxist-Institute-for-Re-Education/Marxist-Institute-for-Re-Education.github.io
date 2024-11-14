@@ -1,0 +1,17 @@
+sass:
+    sass_dir: _style
+
+defaults:
+  -
+    scope:
+      path: "" # all files
+    values:
+      layout: "default"
+      org_name: "Marxist Institute for Re-Education"
+      discord_invite: "https://discord.gg/GKKDcxxwS4"
+      ig_link: "https://www.instagram.com/marxist.ire/"
+      ig_handle: "marxist.ire"
+      tw_link: "https://x.com/Marxist_IRE"
+      tw_handle: "@Marxist_IRE"
+      tt_link: "https://www.tiktok.com/@marxist.ire"
+      tt_handle: "@marxist.ire"

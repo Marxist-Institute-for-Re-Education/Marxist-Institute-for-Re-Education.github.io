@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mire - {{ page.title }}</title>
+        <link rel="icon" type="image/x-icon" href="/images/red-graphic.png">
+    </head>
+    <body>
+        <header>
+            <img src="/images/full-logo.png" alt="MIRE Logo">
+            {{ page.org_name }}
+        </header>
+        <nav>
+            <a href="/articles.html">Articles</a>
+            <a href="/program.html">Program</a>
+            <a href="/constitution.md">Constitution</a>
+            <a href="/socials.html">Socials</a>
+        </nav>
+        {{ content }}
+    </body>
+</html>
