@@ -1,0 +1,10 @@
+<li>
+    {% if page.title == include.title %}
+        <a href="/{{ include.url }}" class="nav-link active" aria-current="page">
+            {{ include.title }}
+        </a>
+    {% else %}
+        <a href="/{{ include.url }}" class="nav-link">{{ include.title }}</a>
+    {% endif %}
+    </a>
+</li>

@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Mire - {{ page.title }}</title>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mire - {{ page.title }}</title>
         <link rel="icon" type="image/x-icon" href="/images/red-graphic.png">
-        <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+        <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
         {% for name in layout.extra_styles %}
             <link rel="stylesheet" type="text/css" href="/assets/css/{{ name }}.css">
         {% endfor %}
     </head>
     <body>
-        <header>
-            <img src="/images/full-logo.png" alt="MIRE Logo" id="header-logo">
-            <span id="header-org-name">
-                {{ page.org_name }}
-            </span>
-        </header>
-        <nav id="topnav">
-            <ul>
-                <li {% if page.title == "Articles" %}class="active"{% endif %}>
-                <a href="/articles.html">Articles</a></li>
-                <li {% if page.title == "Program" %}class="active"{% endif %}>
-                <a href="/program.html">Program</a></li>
-                <li {% if page.title == "Socials" %}class="active"{% endif %}>
-                <a href="/socials.html">Socials</a></li>
-                <li {% if page.title == "Reading List" %}class="active"{% endif %}>
-                <a href="/reading-list.html">Reading List</a></li>
-            </ul>
-        </nav>
+        <div class="navbar navbar-dark">
+            <header class="container-fluid">
+                <a href="/index.html" class="navbar-brand">
+                    <img src="/images/full-logo.png" alt="MIRE Logo" id="header-logo">
+                    <span id="header-org-name">
+                        {{ page.org_name }}
+                    </span>
+                </a>
+            </header>
+            <nav id="topnav">
+                <ul>
+                    {% include navbar-item.html title="Articles" url="articles.html" %}
+                    {% include navbar-item.html title="Program" url="program.html" %}
+                    {% include navbar-item.html title="Socials" url="socials.html" %}
+                    {% include navbar-item.html title="Reading List" url="reading-list.html" %}
+                    {% include navbar-item.html title="Constitution" url="constitution.md" %}
+                </ul>
+            </nav>
+        </div>
         <div id="content">
             {{ content }}
         </div>
