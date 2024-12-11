@@ -30,35 +30,36 @@ header {
 nav#topnav {
     position: sticky;
     overflow: hidden;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: $dark-grey;
+
+        li {
+            float: left;
+
+            a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+        }
+
+        li:not(.active) a:hover {
+            background-color: $red-darker;
+        }
+
+        li.active {
+            background-color: $red-darker;
+        }
+    }
 }
 
-nav#topnav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: $dark-grey;
-}
-
-nav#topnav li {
-    float: left;
-}
-
-nav#topnav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-nav#topnav li:not(.active) a:hover {
-    background-color: $red-darker;
-}
-
-nav#topnav li.active {
-    background-color: $red-darker;
-}
 
 @media screen and (max-width: 600px) {
     #header-org-name {
