@@ -1,0 +1,11 @@
+---
+---
+<!--
+This file is needed to show constitution.md within the website, rather than
+just opening the file.
+
+This is a stupid workaround.
+https://stackoverflow.com/questions/41966638/jekyll-on-github-pages-include-markdown-in-another-markdown-file
+-->
+{% capture constitution %}{% include constitution.md %}{% endcapture %}
+{{ constitution | markdownify }}
